@@ -41,11 +41,11 @@ Inspect the existing test stack and follow `react-testing`. Prefer observable be
 
 ## Skill routing
 
-- React DOM migrations: `skills/react-migration/SKILL.md`.
-- Browser interface and accessibility work: `skills/react-interface-quality/SKILL.md`.
-- Android or iOS React Native work: `skills/react-native-development/SKILL.md`.
-- HTTP client and async API work: `skills/react-api-integration/SKILL.md`.
-- Test design, test changes, or flaky tests: `skills/react-testing/SKILL.md`.
+- React DOM migrations: the `react-migration` skill.
+- Browser interface and accessibility work: the `react-interface-quality` skill.
+- Android or iOS React Native work: the `react-native-development` skill.
+- HTTP client and async API work: the `react-api-integration` skill.
+- Test design, test changes, or flaky tests: the `react-testing` skill.
 
 ## Hard rules
 

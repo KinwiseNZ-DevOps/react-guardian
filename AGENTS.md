@@ -34,7 +34,7 @@ Before reporting any change done, run:
 python scripts/skills_tool.py check
 ```
 
-Checks: frontmatter, name/folder match, description length and trigger, body under 500 lines, every relative link resolves (including README.md and AGENTS.md), agent profile naming with no more than two profiles per host and exactly one `-workflow` main agent, at least 3 eval cases per skill, catalogue not stale, no project-specific terms from `reference-content/strip-terms.txt`, and no em or en dashes in file names or in any text outside `reference-content/`. It also fails on leftover `<placeholder>` text and on setup-only paths that are tracked by Git or not ignored. Keep `SETUP.md`, `templates/`, and `reference-content/` locally for future maintenance, but keep them ignored and out of the Git index.
+Checks: frontmatter, name/folder match, description length and trigger, body under 500 lines, every relative link resolves (including README.md and AGENTS.md), agent profile naming with no more than two profiles per host and exactly one `-workflow` main agent, agent `skills:` entries that exist and no `skills/<name>/SKILL.md` paths in agent bodies, plugin manifests valid and consistent with `LICENSE` and the profiles, at least 3 eval cases per skill, catalogue not stale, no project-specific terms from `reference-content/strip-terms.txt`, and no em or en dashes in file names or in any text outside `reference-content/`. It also fails on leftover `<placeholder>` text and on setup-only paths that are tracked by Git or not ignored. Keep `SETUP.md`, `templates/`, and `reference-content/` locally for future maintenance, but keep them ignored and out of the Git index.
 
 - The tool is necessary but not sufficient for content quality. For new or changed skill body text, also re-read the changed SKILL.md end to end. Reason: a validator checks structure; only reading checks that the instructions still make sense.
 
@@ -42,7 +42,8 @@ Checks: frontmatter, name/folder match, description length and trigger, body und
 
 - `skills/<name>/SKILL.md`: the only source of skill content. Folder name equals frontmatter `name`. Keep each workflow focused so unrelated React tasks do not inherit its constraints.
 - `resources/agents/`: optional, host-native profile sources consumed by `scripts/install_agents.py`. Shared agent names use the `shared-` namespace; skill-specific agent names use `<owning-skill-slug>-<role>`. Keep host-specific syntax here so installed profiles remain reproducible. No `*.agent.md` files for a host means there are no profiles to install for that host.
-- `.github/agents/`, `.claude/agents/`, and `agents/codex/`: optional installed host profiles and Codex role briefs. The installer creates these folders only when it has profiles to copy and never replaces an existing different file.
+- `.claude-plugin/plugin.json` and `marketplace.json`: the Claude Code plugin manifest and single-plugin marketplace. The `agents` array lists each Claude Code profile under `resources/agents/claude-code/`. Reason: without the key, Claude Code scans a top-level `agents/` folder and would load Codex briefs as subagents.
+- `.github/agents/`, `.claude/agents/`: installed copies of host profiles for working in this repo; `agents/codex/` exists only in a target project after `install_agents.py --host codex`, never here.
 - `README.md`: public introduction and generated skill catalogue; regenerate the catalogue with `skills_tool.py` because hand-edits drift.
 - `evals/cases.jsonl`: behavioural routing and boundary cases; maintain at least three per skill so the validator can check coverage exists.
 - `scripts/skills_tool.py`: canonical validation and catalogue generator; use it instead of hand-maintaining derived counts.
@@ -86,9 +87,3 @@ Finish every task with these five points, in this order:
 - After each user-side step, stop and wait for the user to say they are done before giving the next step. Do not stack several manual steps in one reply. Reason: one task at a time keeps confirmation honest and lets problems surface at the step that caused them.
 - No padding, no restating the question, no caveats that carry no information.
 - Skip em dashes and en dashes entirely and always. They are banned in every reply, every file, every commit message, prose and code comments alike. Every dash in text must be a plain hyphen (-). If a hyphen does not fit, use a comma or rewrite the sentence. Reason: nothing justifies an em dash; a banned character that appears anywhere is a single, checkable, zero-tolerance rule.
-
-<!-- installed-skill-agent-routing:start -->
-## Installed skill agent dispatch
-
-When a task matches a role brief in `agents/codex/`, read the matching brief and use it with the relevant skill instructions. Use native subagent delegation when available; otherwise follow the brief directly. Review the result before reporting.
-<!-- installed-skill-agent-routing:end -->

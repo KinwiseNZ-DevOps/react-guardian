@@ -92,7 +92,14 @@ Start with the router when a task spans areas or the right specialist is unclear
 
 You can install a single specialist skill without the router if you only need that workflow.
 
-Copy or symlink the chosen skill folders into your agent's skills directory:
+**Claude Code plugin** (installs all skills and both agent profiles together):
+
+```text
+/plugin marketplace add KinwiseNZ-DevOps/react-guardian
+/plugin install react-guardian@react-guardian-marketplace
+```
+
+Or copy or symlink the chosen skill folders into your agent's skills directory:
 
 | Agent | Where skills live |
 |---|---|

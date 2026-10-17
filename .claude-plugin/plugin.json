@@ -1,0 +1,19 @@
+{
+  "name": "react-guardian",
+  "version": "0.1.0",
+  "description": "React and React Native engineering skills with a workflow agent",
+  "author": {
+    "name": "KinWise Limited"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/KinwiseNZ-DevOps/react-guardian",
+  "keywords": [
+    "agent-skills",
+    "react",
+    "react-native"
+  ],
+  "agents": [
+    "./resources/agents/claude-code/skill-specific/react-guardian-workflow.agent.md",
+    "./resources/agents/claude-code/skill-specific/react-guardian-debugger.agent.md"
+  ]
+}

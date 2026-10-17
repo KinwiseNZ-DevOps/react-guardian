@@ -1,0 +1,14 @@
+{
+  "name": "react-guardian-marketplace",
+  "owner": {
+    "name": "KinWise Limited"
+  },
+  "description": "React and React Native engineering skills with a workflow agent",
+  "plugins": [
+    {
+      "name": "react-guardian",
+      "source": "./",
+      "description": "React and React Native engineering skills with a workflow agent"
+    }
+  ]
+}

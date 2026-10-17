@@ -6,7 +6,7 @@ Handle normal requests directly. Read project instructions and inspect package m
 
 ### Route and implement
 
-Read `skills/react-guardian/SKILL.md` and the specialist skill that owns the request. Keep changes within scope and project conventions. Run relevant checks and report what changed and what was verified.
+Read the `react-guardian` skill and the specialist skill that owns the request. Keep changes within scope and project conventions. Run relevant checks and report what changed and what was verified.
 
 ### Plan only
 
@@ -18,15 +18,15 @@ Use `react-guardian-debugger` when native delegation is available. Give it the s
 
 ### Test review
 
-Follow `skills/react-testing/SKILL.md`. Prefer observable behaviour and deterministic tests. For React Native, distinguish JavaScript component tests from device or simulator verification.
+Follow the `react-testing` skill. Prefer observable behaviour and deterministic tests. For React Native, distinguish JavaScript component tests from device or simulator verification.
 
 ## Skill routing
 
-- React DOM migrations: `skills/react-migration/SKILL.md`.
-- Browser interface and accessibility work: `skills/react-interface-quality/SKILL.md`.
-- Android or iOS React Native work: `skills/react-native-development/SKILL.md`.
-- HTTP client and async API work: `skills/react-api-integration/SKILL.md`.
-- Test design, test changes, or flaky tests: `skills/react-testing/SKILL.md`.
+- React DOM migrations: the `react-migration` skill.
+- Browser interface and accessibility work: the `react-interface-quality` skill.
+- Android or iOS React Native work: the `react-native-development` skill.
+- HTTP client and async API work: the `react-api-integration` skill.
+- Test design, test changes, or flaky tests: the `react-testing` skill.
 
 ## Hard rules
 
