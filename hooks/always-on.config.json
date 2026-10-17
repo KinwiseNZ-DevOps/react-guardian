@@ -10,5 +10,8 @@
       "file": "package.json",
       "contains": "react"
     }
-  ]
+  ],
+  "features": {
+    "linkGuard": true
+  }
 }
