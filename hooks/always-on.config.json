@@ -1,0 +1,14 @@
+{
+  "id": "react-guardian",
+  "name": "React Guardian",
+  "phrase": "react",
+  "rules": "skills/react-guardian/references/always-on-rules.md",
+  "defaultMode": "on",
+  "autoDetect": true,
+  "autoMarkers": [
+    {
+      "file": "package.json",
+      "contains": "react"
+    }
+  ]
+}
