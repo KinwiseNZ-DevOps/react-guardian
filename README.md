@@ -17,6 +17,8 @@
 
 # ⚡ React Guardian
 
+</div>
+
 Table of contents:
 
 - [Skills](#skills)
@@ -29,6 +31,8 @@ Table of contents:
 - [Status and limits](#status-and-limits)
 
 ---
+
+<div align="center">
 
 **Focused, evidence-based skills for React web and native applications.**
 
