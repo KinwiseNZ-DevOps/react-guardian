@@ -34,6 +34,10 @@ Retain the product's visual identity and user flows. Prefer composable component
 - Avoid rendering the same information in different structures solely by device size when responsive CSS can preserve semantics.
 - Do not add loading, error, or empty states mechanically when the component has no asynchronous or variable data.
 
+## Agent dispatch
+
+Use the `react-guardian-workflow` profile's route-and-implement mode for an interface change, or its plan-only mode when the approach needs agreeing first. If the profile is unavailable, follow the steps directly.
+
 ## References
 
 - [React API reference and Rules of React](https://react.dev/reference/react)

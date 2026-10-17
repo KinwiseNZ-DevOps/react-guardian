@@ -33,6 +33,10 @@ Keep transport and response handling consistent with the application's existing 
 - Do not trust HTML or other active content returned by a server. Render text safely and use an established sanitisation boundary when rich HTML is required.
 - Avoid logging tokens, personal data, full request bodies, or server internals.
 
+## Agent dispatch
+
+Use the `react-guardian-workflow` profile's route-and-implement mode for an integration change, or its plan-only mode when the approach needs agreeing first. If the profile is unavailable, follow the steps directly.
+
 ## Next
 
 - [react-interface-quality](../react-interface-quality/SKILL.md)

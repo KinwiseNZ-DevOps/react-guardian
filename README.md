@@ -132,7 +132,7 @@ Each supported host receives one main `react-guardian-workflow` profile and one 
 python scripts/skills_tool.py check
 ```
 
-Checks frontmatter, naming, description triggers, body length, relative links, agent prefixes, behavioural cases, catalogue freshness, banned dash characters, and that setup-only files are not tracked by Git. Setup materials can stay on the maintainer's computer, ignored and outside the Git index.
+Checks frontmatter, name and folder matching, description triggers, body length, every relative link including this README and AGENTS.md, agent profile naming and count, behavioural cases, catalogue freshness, project-specific terms, and banned dash characters in file names and contents. After the starter skill is gone it also rejects leftover placeholders and setup-only paths that are tracked by Git or not ignored. Setup materials can stay on the maintainer's computer, ignored and outside the Git index.
 
 ---
 

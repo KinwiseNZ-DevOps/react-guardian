@@ -1,6 +1,6 @@
 __pycache__/
 *.pyc
 .DS_Store
-SETUP.md
-templates/
-reference-content/
+/SETUP.md
+/templates/
+/reference-content/

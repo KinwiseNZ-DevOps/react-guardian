@@ -33,6 +33,10 @@ Use React's shared component and Hook rules together with React Native's platfor
 - Check the documentation for the installed React Native version and relevant platform because APIs and support can vary.
 - Keep React render and Hook logic pure. Side effects belong in event handlers or Effects, not in render.
 
+## Agent dispatch
+
+Use the `react-guardian-workflow` profile's route-and-implement mode for a React Native change, or its plan-only mode when the approach needs agreeing first. If the profile is unavailable, follow the steps directly.
+
 ## References
 
 - [React Native getting started](https://reactnative.dev/docs/getting-started)
