@@ -10,6 +10,7 @@ run once skills/example-skill has been deleted.
 """
 import json
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -173,9 +174,24 @@ def strip_terms():
 
 
 def ship_checks():
-    if (SKILLS / "example-skill").exists():
-        return [], True
+    private_paths = ("SETUP.md", "templates", "reference-content")
+    tracked = subprocess.run(
+        ["git", "ls-files", "--cached", "--", *private_paths],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
     errors = []
+    if tracked.returncode:
+        errors.append("could not check Git index for private setup files")
+    else:
+        errors.extend(
+            f"{path}: private setup file is tracked; keep it local and ignored"
+            for path in tracked.stdout.splitlines()
+        )
+    if (SKILLS / "example-skill").exists():
+        return errors, True
     for rel in PLACEHOLDER_FILES:
         f = ROOT / rel
         if not f.exists():
@@ -188,9 +204,6 @@ def ship_checks():
                     continue
                 if " " in inner or inner[0].isupper():
                     errors.append(f"{rel}:{i}: leftover placeholder <{inner}>")
-    for leftover in ("SETUP.md", "templates", "reference-content"):
-        if (ROOT / leftover).exists():
-            errors.append(f"{leftover}: setup scaffolding still present (delete before shipping)")
     return errors, False
 
 

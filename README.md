@@ -1,20 +1,15 @@
 ```
-<ASCII banner of the repo name. Generate one with figlet or any text-to-ASCII tool>
+ ____                 _     ____ uardian
+|  _ \ ___  __ _  ___| |_  / ___| __ _ _   _
+| |_) / _ \/ _` |/ __| __| | |  _ / _` | | | |
+|  _ <  __/ (_| | (__| |_  | |_| | (_| | |_| |
+|_| \_\___|\__,_|\___|\__|  \____|\__,_|\__, |
+                                           |___/
 ```
 
 <div align="center">
 
-# ⚡ <Repo Name>
-
-**<One line: what these skills do, for whom>**
-
-[![Validate skills](https://github.com/<OWNER>/<REPO>/actions/workflows/validate.yml/badge.svg)](https://github.com/<OWNER>/<REPO>/actions/workflows/validate.yml)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Agent skills](https://img.shields.io/badge/agent_skills-1-8A2BE2)](https://agentskills.io)
-[![Format](https://img.shields.io/badge/format-SKILL.md-orange)](https://agentskills.io/specification)
-[![Tooling](https://img.shields.io/badge/tooling-stdlib_only-success)](scripts/skills_tool.py)
-
-</div>
+# ⚡ React Guardian
 
 Table of contents:
 
@@ -29,10 +24,20 @@ Table of contents:
 
 ---
 
-> [!IMPORTANT]
-> **Principle: <the single sentence every skill in this repo must obey.>**
+**Focused, evidence-based skills for React web and native applications.**
 
-<Two or three sentences: what problems the skills solve, what they are grounded in (official docs or authoritative sources), and that they follow the open [Agent Skills](https://agentskills.io/specification) format. Name the agents they work in, e.g. Claude Code, Codex, Cursor, Copilot, OpenCode, or any SKILL.md-compatible agent.>
+</div>
+
+> [!IMPORTANT]
+> **Principle: Preserve user-visible behaviour, accessibility, and the project's conventions while making the smallest evidence-based change that solves the request.**
+
+[![Validate skills](https://github.com/KinwiseNZ-DevOps/react-guardian/actions/workflows/validate.yml/badge.svg)](https://github.com/KinwiseNZ-DevOps/react-guardian/actions/workflows/validate.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Agent skills](https://img.shields.io/badge/agent_skills-6-8A2BE2)](https://agentskills.io)
+[![Format](https://img.shields.io/badge/format-SKILL.md-orange)](https://agentskills.io/specification)
+[![Tooling](https://img.shields.io/badge/tooling-stdlib_only-success)](scripts/skills_tool.py)
+
+React Guardian routes React and React Native work into focused skills for migrations, web and native interfaces, API integration, and tests. The guidance follows the open [Agent Skills](https://agentskills.io/specification) format and links to official React and React Native documentation. Skills work on Claude Code, Codex, Cursor, Copilot, OpenCode, Windsurf, and other hosts that support `SKILL.md`.
 
 ---
 
@@ -42,7 +47,12 @@ Table of contents:
 <!-- catalogue:begin -->
 | Skill | Purpose |
 |---|---|
-| [`example-skill`](skills/example-skill/SKILL.md) | Placeholder skill demonstrating this repository's skill format: the gate, steps, hard rule phrasing and reference layout. |
+| [`react-api-integration`](skills/react-api-integration/SKILL.md) | Designs or changes React application clients that communicate with HTTP APIs, including request boundaries, authentication handling, errors, and async UI states. |
+| [`react-guardian`](skills/react-guardian/SKILL.md) | Routes React and React Native work to focused skills for migrations, web and native interfaces, API integration, and testing. |
+| [`react-interface-quality`](skills/react-interface-quality/SKILL.md) | Improves React DOM component structure, responsive behaviour, accessibility, and design-system consistency. |
+| [`react-migration`](skills/react-migration/SKILL.md) | Plans and performs React for web version upgrades and legacy API migrations. |
+| [`react-native-development`](skills/react-native-development/SKILL.md) | Builds and reviews React Native applications for mobile platforms using native components, platform-aware code, and React Native tooling. |
+| [`react-testing`](skills/react-testing/SKILL.md) | Writes or reviews tests for React components, hooks, and user workflows. |
 <!-- catalogue:end -->
 
 ---
@@ -52,13 +62,15 @@ Table of contents:
 
 ```mermaid
 flowchart TD
-    R["⚡ <router-skill><br/><what it routes and enforces>"]
-    R --> A["🔍 <skill-a><br/><one-line scope>"]
-    R --> B["🛠️ <skill-b><br/><one-line scope>"]
-    R --> C["✅ <skill-c><br/><one-line scope>"]
+    R["⚡ react-guardian<br/>shared rules and routing"]
+    R --> A["react-migration<br/>version and API changes"]
+    R --> B["react-interface-quality<br/>components and responsive UI"]
+    R --> C["react-api-integration<br/>HTTP API clients"]
+    R --> D["react-testing<br/>behavioural coverage"]
+    R --> E["react-native-development<br/>native app workflows"]
 ```
 
-<One sentence on the order or priority in which the skills usually apply. Delete this section and the diagram for a repo with a single skill.>
+Start with the router when a task spans areas or the right specialist is unclear, then use the relevant specialist skill.
 
 ---
 
@@ -66,48 +78,40 @@ flowchart TD
 ## 📦 Install
 
 > [!TIP]
-> Install the router skill **plus every sibling skill it links to**; routers reference siblings by relative path.
+> Install `react-guardian` together with every sibling skill it links to. This router refers to those skills by relative path.
 
-Copy or symlink the `skills/` subfolders you want into your agent's skills directory:
+You can install a single specialist skill without the router if you only need that workflow.
+
+Copy or symlink the chosen skill folders into your agent's skills directory:
 
 | Agent | Where skills live |
 |---|---|
 | Claude Code | `~/.claude/skills/` or a project's `.claude/skills/` |
-| Codex · Cursor · Copilot · OpenCode · Windsurf | the agent's own SKILL.md discovery path |
+| Codex, Cursor, Copilot, OpenCode, Windsurf | The agent's `SKILL.md` discovery path |
 
-To install supplied Claude Code, GitHub Copilot or Codex profiles into a project, run `python scripts/install_agents.py --host claude-code --target PATH`. The command adds profiles to their native agent folders and leaves unrelated files alone. Other hosts receive the skills only. If no profile files are supplied for that host, it makes no changes.
+To install supplied Claude Code, GitHub Copilot, or Codex profiles into a project, run `python scripts/install_agents.py --host claude-code --target PATH`. The installer adds profiles to their native folders and leaves unrelated files alone. Other hosts receive skills only.
 
 ---
 
 <a id="usage"></a>
 ## 🚀 Usage
 
-> [!TIP]
-> **You never need to memorise skill names.** Just describe the problem in plain words; the router picks the right skill automatically. But if you want short, reliable phrases that always work, use these:
-
-**The flow** (this is all most people need):
-
-```text
-1. "<first phrase>"     → <what happens>
-2. "<second phrase>"    → <what happens>
-3. "<third phrase>"     → <what happens>
-```
-
-**Short phrases that trigger each skill:**
+Describe the task in plain language. The router selects a specialist when available.
 
 | Just say… | What you get | Skill used |
 |---|---|---|
-| `<short plain phrase>` | <what happens> | *<skill>* |
-
-> [!NOTE]
-> Skills also trigger on their own when your request matches. In Claude Code you can also invoke one explicitly with `/<skill-name>`, but the plain phrases above are shorter and work across every agent.
+| “Plan our React 18 to 19 upgrade” | A staged, project-specific migration plan | `react-migration` |
+| “Fix this iOS and Android React Native screen” | A platform-aware native app change | `react-native-development` |
+| “Make this form work well on mobile and by keyboard” | A focused, accessible responsive UI change | `react-interface-quality` |
+| “Handle expired sessions from our API cleanly” | Consistent request and error handling | `react-api-integration` |
+| “Add a regression test for this async flow” | A focused behaviour test using project conventions | `react-testing` |
 
 ---
 
 <a id="optional-agent-profiles"></a>
 ## Optional agent profiles
 
-This section applies only when agent definitions were supplied during setup. Skill-specific profiles use `skill-slug-role` names, while repo-wide shared profiles use `shared-role` names. Profiles live under `resources/agents/<host>/`. Other hosts receive the skills only. If no agents were supplied, remove this section and let the skills run directly.
+Each supported host receives one main `react-guardian-workflow` profile and one optional `react-guardian-debugger` helper. Planning, implementation, and test review are modes in the main profile. Names are scoped to the owning skill to avoid clashes. Other hosts receive the skills only.
 
 ---
 
@@ -118,7 +122,7 @@ This section applies only when agent definitions were supplied during setup. Ski
 python scripts/skills_tool.py check
 ```
 
-Checks: frontmatter, name/folder match, description length and trigger, body under 500 lines, relative links resolve, agent profile name prefixes, at least 3 eval cases per skill, catalogue freshness, and no em or en dashes. After the starter skill is deleted it also rejects leftover placeholders and setup scaffolding. Stdlib only, no dependencies.
+Checks frontmatter, naming, description triggers, body length, relative links, agent prefixes, behavioural cases, catalogue freshness, banned dash characters, and that setup-only files are not tracked by Git. Setup materials can stay on the maintainer's computer, ignored and outside the Git index.
 
 ---
 
@@ -129,15 +133,15 @@ Checks: frontmatter, name/folder match, description length and trigger, body und
 <summary>Repository layout</summary>
 
 ```
-skills/<name>/SKILL.md      one folder per skill (+ references/ where needed)
-evals/cases.jsonl           3+ behavioural cases per skill
+skills/<name>/SKILL.md        one folder per skill
+evals/cases.jsonl             behavioural cases for every skill
 resources/agents/             optional host profiles copied by installer
-scripts/install_agents.py     copy optional agent profiles into a project
-scripts/skills_tool.py      validate, regenerate catalogue (stdlib only)
-.github/workflows/          CI runs `skills_tool.py check` (free on public repos)
-AGENTS.md                   agent-facing rules for this repo
-SETUP.md                    fill-in checklist; delete when done
-reference-content/          source material the skills are built from; delete when done
+scripts/install_agents.py     install supplied agent profiles
+scripts/skills_tool.py        validate and refresh the catalogue
+.github/workflows/            CI validation workflow
+AGENTS.md                     repository rules and file map
+SETUP.md                      temporary setup checklist
+reference-content/            temporary, ignored setup sources
 ```
 
 </details>
@@ -148,13 +152,12 @@ reference-content/          source material the skills are built from; delete wh
 ## 📌 Status and limits
 
 > [!NOTE]
-> - <Known limits, each dated, mirroring the "Known deliberate states" section of AGENTS.md.>
 > - Licensed under MIT (see [LICENSE](LICENSE)).
 
 ---
 
 <div align="center">
 
-**⚡ Built on the [Agent Skills](https://agentskills.io) open format · grounded in <link to the official docs or sources>**
+**⚡ Built on the [Agent Skills](https://agentskills.io) open format · grounded in [official React documentation](https://react.dev/)**
 
 </div>
