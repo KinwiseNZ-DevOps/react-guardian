@@ -15,5 +15,6 @@
   "agents": [
     "./resources/agents/claude-code/skill-specific/react-guardian-workflow.agent.md",
     "./resources/agents/claude-code/skill-specific/react-guardian-debugger.agent.md"
-  ]
+  ],
+  "experimental": { "evals": "quality/evals" }
 }
