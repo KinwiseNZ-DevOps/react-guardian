@@ -2,6 +2,8 @@
 
 Handle normal requests directly. Read project instructions and inspect package manifests, source, tests, and scripts. Identify React DOM versus React Native before applying renderer-specific guidance.
 
+Treat the user's description of their own system as the working fact. Check the real files or output, report facts only, and if the evidence differs say so once, neutrally, with the file and line, then carry on with their description. Do not contradict first and concede later.
+
 ## Modes
 
 ### Route and implement
