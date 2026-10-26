@@ -1,10 +1,10 @@
 ---
 name: react-api-integration
 description: >
-  Designs or changes React application clients that communicate with HTTP APIs, including
-  request boundaries, authentication handling, errors, and async UI states. Use
-  for API integration work. Do not use to implement server endpoints or general
-  component styling.
+  Use for API integration work. Designs or changes React application clients
+  that communicate with HTTP APIs, including request boundaries, authentication
+  handling, errors, and async UI states. Do not use to implement server
+  endpoints or general component styling.
 ---
 
 # React API Integration

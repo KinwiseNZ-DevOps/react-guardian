@@ -1,9 +1,9 @@
 ---
 name: react-testing
 description: >
-  Writes or reviews tests for React components, hooks, and user workflows. Use
-  when adding coverage, diagnosing flaky UI tests, or choosing test boundaries.
-  Do not use for production changes that do not involve test work.
+  Use when adding coverage, diagnosing flaky UI tests, or choosing test
+  boundaries. Writes or reviews tests for React components, hooks, and user
+  workflows. Do not use for production changes that do not involve test work.
 ---
 
 # React Testing

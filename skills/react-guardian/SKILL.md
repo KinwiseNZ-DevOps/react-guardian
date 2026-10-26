@@ -1,9 +1,10 @@
 ---
 name: react-guardian
 description: >
-  Routes React and React Native work to focused skills for migrations, web and
-  native interfaces, API integration, and testing. Use when a task spans areas
-  or its owner is unclear. Do not use for a task that clearly belongs to one focused skill.
+  Use when a task spans areas or its owner is unclear. Routes React and React
+  Native work to focused skills for migrations, web and native interfaces, API
+  integration, and testing. Do not use for a task that clearly belongs to one
+  focused skill.
 ---
 
 # React Guardian
