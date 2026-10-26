@@ -4,6 +4,8 @@ All notable changes to this plugin are listed here, newest first. To cut a relea
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-10-26
+
 - The validator now checks the Codex manifests (`plugin.json`, `.agents/plugins/marketplace.json`) against the Claude ones.
 - Rewrote the six skill descriptions with the phrases people use, so they trigger more reliably.
 
