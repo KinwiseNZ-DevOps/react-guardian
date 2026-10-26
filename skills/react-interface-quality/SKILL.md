@@ -1,10 +1,12 @@
 ---
 name: react-interface-quality
 description: >
-  Use for browser UI reviews and changes. Improves React DOM component
-  structure, responsive behaviour, accessibility, and design-system consistency.
-  Do not use for React Native screens, API client contracts, or backend
-  integration.
+  Use when reviewing or changing React DOM UI: component structure, responsive
+  layout, keyboard and screen reader behaviour, or consistency with a design
+  system. Improves React DOM component structure, responsive behaviour,
+  accessibility and design-system consistency. Do not use for React Native
+  screens (react-native-development), API client contracts (react-api-
+  integration) or backend integration.
 ---
 
 # React Interface Quality

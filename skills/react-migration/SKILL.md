@@ -1,10 +1,11 @@
 ---
 name: react-migration
 description: >
-  Use when upgrading React or React DOM, moving to modern root APIs, or fixing
-  migration warnings. Plans and performs React for web version upgrades and
-  legacy API migrations. Do not use for React Native runtime upgrades or
-  unrelated feature work.
+  Use when upgrading React or React DOM, moving to modern root APIs, replacing
+  legacy APIs, or fixing console warnings after a version upgrade. Plans and
+  performs React for web version upgrades and legacy API migrations. Do not use
+  for React Native runtime upgrades (react-native-development) or unrelated
+  feature work.
 ---
 
 # React Migration

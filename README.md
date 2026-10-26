@@ -57,12 +57,12 @@ React Guardian routes React and React Native work into focused skills for migrat
 <!-- catalogue:begin -->
 | Skill | Purpose |
 |---|---|
-| [`react-api-integration`](skills/react-api-integration/SKILL.md) | Designs or changes React application clients that communicate with HTTP APIs, including request boundaries, authentication handling, errors, and async UI states. |
-| [`react-guardian`](skills/react-guardian/SKILL.md) | Routes React and React Native work to focused skills for migrations, web and native interfaces, API integration, and testing. |
-| [`react-interface-quality`](skills/react-interface-quality/SKILL.md) | Improves React DOM component structure, responsive behaviour, accessibility, and design-system consistency. |
+| [`react-api-integration`](skills/react-api-integration/SKILL.md) | Designs or changes React clients that talk to HTTP APIs, including request boundaries, authentication handling, errors and async UI states. |
+| [`react-guardian`](skills/react-guardian/SKILL.md) | Routes work to the focused react skills for migrations, web and native interfaces, API integration and testing. |
+| [`react-interface-quality`](skills/react-interface-quality/SKILL.md) | Improves React DOM component structure, responsive behaviour, accessibility and design-system consistency. |
 | [`react-migration`](skills/react-migration/SKILL.md) | Plans and performs React for web version upgrades and legacy API migrations. |
-| [`react-native-development`](skills/react-native-development/SKILL.md) | Builds and reviews React Native applications for mobile platforms using native components, platform-aware code, and React Native tooling. |
-| [`react-testing`](skills/react-testing/SKILL.md) | Writes or reviews tests for React components, hooks, and user workflows. |
+| [`react-native-development`](skills/react-native-development/SKILL.md) | Builds and reviews React Native applications using native components, platform-aware code and React Native tooling. |
+| [`react-testing`](skills/react-testing/SKILL.md) | Writes or reviews tests for React components, hooks and user workflows. |
 <!-- catalogue:end -->
 
 ---

@@ -1,9 +1,11 @@
 ---
 name: react-native-development
 description: >
-  Use for Android or iOS React Native work. Builds and reviews React Native
-  applications for mobile platforms using native components, platform-aware
-  code, and React Native tooling. Do not use for browser DOM or React DOM tasks.
+  Use when building or fixing a React Native app for Android or iOS: screens,
+  navigation, platform-specific code, native modules or Metro problems. Builds
+  and reviews React Native applications using native components, platform-aware
+  code and React Native tooling. Do not use for browser DOM or React DOM tasks
+  (react-interface-quality).
 ---
 
 # React Native Development
