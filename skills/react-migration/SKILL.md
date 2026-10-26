@@ -11,6 +11,13 @@ description: >
 
 Keep observable behaviour stable while changing runtime and APIs. The target version, framework, renderer, libraries, and deployment setup determine the safe path; inspect them before editing.
 
+## Hard rules
+
+- Keep `react` and `react-dom` versions compatible and preserve the package manager's lockfile discipline.
+- Do not remove `forwardRef`, class components, or `propTypes` indiscriminately. Confirm the exact API, component type, and target version first.
+- Treat Strict Mode development behaviour as a diagnostic signal. Do not hide warnings by disabling it without identifying the underlying issue.
+- Do not promise a zero-warning upgrade when third-party libraries or unrelated warnings remain; identify ownership and evidence.
+
 ## Gate
 
 | Situation | Action |
@@ -25,13 +32,6 @@ Keep observable behaviour stable while changing runtime and APIs. The target ver
 2. **Plan** compatible intermediate steps and risks. For React 19, consult the [official upgrade guide](https://react.dev/blog/2024/04/25/react-19-upgrade-guide) and follow its staged upgrade path rather than assuming a single jump between major versions.
 3. **Migrate** root rendering and deprecated APIs in small changes. Prefer official codemods only after reviewing their scope and the diff. Do not assume every library or app uses the same renderer.
 4. **Check behaviour** with existing tests, build, and targeted manual scenarios. Review warnings and fix only those caused by the migration.
-
-## Hard rules
-
-- Keep `react` and `react-dom` versions compatible and preserve the package manager's lockfile discipline.
-- Do not remove `forwardRef`, class components, or `propTypes` indiscriminately. Confirm the exact API, component type, and target version first.
-- Treat Strict Mode development behaviour as a diagnostic signal. Do not hide warnings by disabling it without identifying the underlying issue.
-- Do not promise a zero-warning upgrade when third-party libraries or unrelated warnings remain; identify ownership and evidence.
 
 ## Agent dispatch
 

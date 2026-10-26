@@ -1,0 +1,20 @@
+{
+  "name": "react-guardian-marketplace",
+  "interface": {
+    "displayName": "KinWise React Guardian"
+  },
+  "plugins": [
+    {
+      "name": "react-guardian",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

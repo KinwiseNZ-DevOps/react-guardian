@@ -10,6 +10,14 @@ description: >
 
 Test outcomes a user or caller can observe. Keep tests aligned with the repository's test runner and component boundaries instead of importing a preferred stack without need.
 
+## Hard rules
+
+- Do not assert private implementation details when rendered behaviour or public contracts can be tested.
+- Do not mock the unit under test or its local state transitions. Mock external boundaries only when the real boundary is not suitable for this test.
+- Do not make time-sensitive or network-dependent tests flaky. Control the clock or isolate external services using project conventions.
+- Do not suppress React warnings broadly; identify and fix the source or explain why an isolated warning is expected.
+- For React Native tests, follow the installed project's setup. JavaScript component tests do not validate the underlying platform code, so verify platform-dependent behaviour on a device or simulator.
+
 ## Gate
 
 | Situation | Action |
@@ -24,14 +32,6 @@ Test outcomes a user or caller can observe. Keep tests aligned with the reposito
 2. **Choose** the narrowest boundary that proves the behaviour: pure logic, hook/component interaction, or end-to-end workflow.
 3. **Exercise** realistic user input, async completion, and meaningful failure states. Keep fixtures minimal and deterministic.
 4. **Run** the focused test, then relevant broader checks if available. Report failures separately from pre-existing failures.
-
-## Hard rules
-
-- Do not assert private implementation details when rendered behaviour or public contracts can be tested.
-- Do not mock the unit under test or its local state transitions. Mock external boundaries only when the real boundary is not suitable for this test.
-- Do not make time-sensitive or network-dependent tests flaky. Control the clock or isolate external services using project conventions.
-- Do not suppress React warnings broadly; identify and fix the source or explain why an isolated warning is expected.
-- For React Native tests, follow the installed project's setup. JavaScript component tests do not validate the underlying platform code, so verify platform-dependent behaviour on a device or simulator.
 
 ## Agent dispatch
 

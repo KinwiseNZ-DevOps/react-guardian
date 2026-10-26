@@ -1,0 +1,18 @@
+{"skill": "react-api-integration", "type": "obvious", "query": "Add a React client for our REST API with login handling and error states."}
+{"skill": "react-api-integration", "type": "paraphrase", "query": "How should our web app deal with failed requests and loading states when it calls the backend?"}
+{"skill": "react-api-integration", "type": "unrelated", "query": "Write the server endpoint for the orders list."}
+{"skill": "react-guardian", "type": "obvious", "query": "I have a React task that touches both the web app and tests. Where do we start?"}
+{"skill": "react-guardian", "type": "paraphrase", "query": "We need to modernise our React project but I do not know which area to tackle first."}
+{"skill": "react-guardian", "type": "unrelated", "query": "Write a Django serializer."}
+{"skill": "react-interface-quality", "type": "obvious", "query": "Review this React component for accessibility and responsive behaviour."}
+{"skill": "react-interface-quality", "type": "paraphrase", "query": "Our web UI is inconsistent with the design system. Clean up the component structure."}
+{"skill": "react-interface-quality", "type": "unrelated", "query": "Upgrade us from React 17 to 19."}
+{"skill": "react-migration", "type": "obvious", "query": "Upgrade our React app from 17 to 19 and fix the migration warnings."}
+{"skill": "react-migration", "type": "paraphrase", "query": "We still use ReactDOM.render and the console warns about it. Modernise it."}
+{"skill": "react-migration", "type": "unrelated", "query": "Write tests for our login form."}
+{"skill": "react-native-development", "type": "obvious", "query": "Build a React Native screen that works on Android and iOS."}
+{"skill": "react-native-development", "type": "paraphrase", "query": "Our mobile app built with React needs platform-specific behaviour for iOS and Android."}
+{"skill": "react-native-development", "type": "unrelated", "query": "Build a responsive web dashboard in React DOM."}
+{"skill": "react-testing", "type": "obvious", "query": "Write tests for this React hook and form component."}
+{"skill": "react-testing", "type": "paraphrase", "query": "Our UI tests are flaky. How should we decide what to test?"}
+{"skill": "react-testing", "type": "unrelated", "query": "Add a new feature to the checkout component."}

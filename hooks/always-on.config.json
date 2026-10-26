@@ -3,7 +3,7 @@
   "name": "React Guardian",
   "phrase": "react",
   "rules": "skills/react-guardian/references/always-on-rules.md",
-  "defaultMode": "on",
+  "defaultMode": "auto",
   "autoDetect": true,
   "autoMarkers": [
     {

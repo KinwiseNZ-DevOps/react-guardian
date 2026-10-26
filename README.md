@@ -98,6 +98,10 @@ You can install a single specialist skill without the router if you only need th
 /plugin marketplace add KinwiseNZ-DevOps/react-guardian
 /plugin install react-guardian@react-guardian-marketplace
 ```
+**ChatGPT desktop plugin** (local, skills and bundled hooks):
+
+This repo has a portable `plugin.json` manifest and a repo marketplace at `.agents/plugins/marketplace.json`. Open this repo as a trusted project and restart ChatGPT desktop, then install **React Guardian** from the Plugins Directory. Review and trust bundled hook scripts before they run.
+
 
 Or copy or symlink the chosen skill folders into your agent's skills directory:
 
@@ -116,12 +120,12 @@ In Claude Code, React Guardian loads a short ruleset into every session as soon 
 
 | Mode | What it does |
 |---|---|
-| `on` (default) | The rules apply in every session |
-| `auto` | The rules apply only in projects that look relevant: a `package.json` that uses React is found |
+| `on` | The rules apply in every session |
+| `auto` (default) | The rules apply only in projects that look relevant: a `package.json` that uses React is found |
 | `off` | The rules do not load |
 
 - Say **"stop react mode"** to pause it for the current session, and **"start react mode"** to resume.
-- Ask Claude to **set the saved mode to on, off or auto**. It writes that word into `~/.claude/.react-guardian.mode`. You can also edit that file yourself, and deleting it returns to the default (`on`).
+- Ask Claude to **set the saved mode to on, off or auto**. It writes that word into `~/.claude/.react-guardian.mode`. You can also edit that file yourself, and deleting it returns to the default (`auto`).
 - It needs Node on the machine, because the start-up hook runs a small Node script. Without Node the hook quietly does nothing.
 - Other agents have no start-up hook here. Paste `skills/react-guardian/references/always-on-rules.md` into that agent's instruction file instead.
 
@@ -189,6 +193,7 @@ Checks frontmatter, name and folder matching, description triggers, body length,
 ```
 skills/<name>/SKILL.md        one folder per skill
 evals/cases.jsonl             behavioural cases for every skill
+evals/triggers.jsonl                  triggering tests per skill: obvious, paraphrase, unrelated
 resources/agents/             optional host profiles copied by installer
 scripts/install_agents.py     install supplied agent profiles
 scripts/skills_tool.py        validate and refresh the catalogue

@@ -11,6 +11,13 @@ description: >
 
 Keep transport and response handling consistent with the application's existing client. Preserve the server contract and show users clear, safe feedback without exposing implementation details. For React Native, check the app's platform and credential storage conventions as well as its network client.
 
+## Hard rules
+
+- Never ship private credentials in client application code or browser-delivered configuration.
+- Do not retry non-idempotent mutations automatically unless the API supports an idempotency mechanism and the user-visible behaviour is clear.
+- Do not trust HTML or other active content returned by a server. Render text safely and use an established sanitisation boundary when rich HTML is required.
+- Avoid logging tokens, personal data, full request bodies, or server internals.
+
 ## Gate
 
 | Situation | Action |
@@ -25,13 +32,6 @@ Keep transport and response handling consistent with the application's existing 
 2. **Define** request and response types at the boundary where the project supports them. Normalize errors once and distinguish validation, authentication, network, and server failures.
 3. **Implement** cancellation or stale-response handling where component lifetime or changing inputs make it necessary. Use bounded retries only for safe, retryable operations.
 4. **Verify** success and failure states, auth expiry, duplicate submission behaviour, and that secrets or sensitive response data are not logged or exposed.
-
-## Hard rules
-
-- Never ship private credentials in client application code or browser-delivered configuration.
-- Do not retry non-idempotent mutations automatically unless the API supports an idempotency mechanism and the user-visible behaviour is clear.
-- Do not trust HTML or other active content returned by a server. Render text safely and use an established sanitisation boundary when rich HTML is required.
-- Avoid logging tokens, personal data, full request bodies, or server internals.
 
 ## Agent dispatch
 
