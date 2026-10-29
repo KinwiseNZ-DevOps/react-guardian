@@ -21,6 +21,7 @@ Retain the product's visual identity and user flows. Prefer composable component
 - Keep controls keyboard-operable, with visible focus and understandable names. Ensure async feedback and validation errors are perceivable.
 - Avoid rendering the same information in different structures solely by device size when responsive CSS can preserve semantics.
 - Do not add loading, error, or empty states mechanically when the component has no asynchronous or variable data.
+- Act only on what the user asked. Before answering or changing anything, open the relevant files and check what is already done; report only what you checked, never guess, and do not redo finished work. Reason: guesses and repeated work waste the user's credit.
 
 ## Gate
 

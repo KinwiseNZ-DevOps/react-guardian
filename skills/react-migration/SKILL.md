@@ -18,6 +18,7 @@ Keep observable behaviour stable while changing runtime and APIs. The target ver
 - Do not remove `forwardRef`, class components, or `propTypes` indiscriminately. Confirm the exact API, component type, and target version first.
 - Treat Strict Mode development behaviour as a diagnostic signal. Do not hide warnings by disabling it without identifying the underlying issue.
 - Do not promise a zero-warning upgrade when third-party libraries or unrelated warnings remain; identify ownership and evidence.
+- Act only on what the user asked. Before answering or changing anything, open the relevant files and check what is already done; report only what you checked, never guess, and do not redo finished work. Reason: guesses and repeated work waste the user's credit.
 
 ## Gate
 

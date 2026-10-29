@@ -19,6 +19,7 @@ Use React's shared component and Hook rules together with React Native's platfor
 - Use `Platform` or `.ios`/`.android` modules only when a real platform difference warrants them; keep shared logic shared.
 - Check the documentation for the installed React Native version and relevant platform because APIs and support can vary.
 - Keep React render and Hook logic pure. Side effects belong in event handlers or Effects, not in render.
+- Act only on what the user asked. Before answering or changing anything, open the relevant files and check what is already done; report only what you checked, never guess, and do not redo finished work. Reason: guesses and repeated work waste the user's credit.
 
 ## Gate
 

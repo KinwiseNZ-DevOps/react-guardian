@@ -19,6 +19,7 @@ Keep transport and response handling consistent with the application's existing 
 - Do not retry non-idempotent mutations automatically unless the API supports an idempotency mechanism and the user-visible behaviour is clear.
 - Do not trust HTML or other active content returned by a server. Render text safely and use an established sanitisation boundary when rich HTML is required.
 - Avoid logging tokens, personal data, full request bodies, or server internals.
+- Act only on what the user asked. Before answering or changing anything, open the relevant files and check what is already done; report only what you checked, never guess, and do not redo finished work. Reason: guesses and repeated work waste the user's credit.
 
 ## Gate
 

@@ -18,6 +18,7 @@ Test outcomes a user or caller can observe. Keep tests aligned with the reposito
 - Do not make time-sensitive or network-dependent tests flaky. Control the clock or isolate external services using project conventions.
 - Do not suppress React warnings broadly; identify and fix the source or explain why an isolated warning is expected.
 - For React Native tests, follow the installed project's setup. JavaScript component tests do not validate the underlying platform code, so verify platform-dependent behaviour on a device or simulator.
+- Act only on what the user asked. Before answering or changing anything, open the relevant files and check what is already done; report only what you checked, never guess, and do not redo finished work. Reason: guesses and repeated work waste the user's credit.
 
 ## Gate
 
