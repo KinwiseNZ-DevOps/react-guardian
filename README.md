@@ -28,6 +28,7 @@ Table of contents:
 - [Optional agent profiles](#optional-agent-profiles)
 - [Validate](#validate)
 - [Layout](#layout)
+- [Works with other repos](#works-with)
 - [Status and limits](#status-and-limits)
 
 ---
@@ -204,6 +205,13 @@ reference-content/            temporary, ignored setup sources
 ```
 
 </details>
+
+---
+
+<a id="works-with"></a>
+## 🤝 Works with other repos
+
+React work depends on the brand. Take the words and brand rules from marketing; do not invent them. Decision order: marketing first (who it is for, how it is marketed, the words and claims), then look and feel, then the technical work. Decide the human side before the technical side. See the Works with other repos section of the router skill for when to hand off. The dependency map is `skills-repos-dependency-map.md` beside the repos.
 
 ---
 
