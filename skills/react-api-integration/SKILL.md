@@ -18,6 +18,8 @@ Keep transport and response handling consistent with the application's existing 
 - Never ship private credentials in client application code or browser-delivered configuration.
 - Do not retry non-idempotent mutations automatically unless the API supports an idempotency mechanism and the user-visible behaviour is clear.
 - Do not trust HTML or other active content returned by a server. Render text safely and use an established sanitisation boundary when rich HTML is required.
+- Follow the installed major version of the data library (for example the current TanStack Query object form for `useQuery`); do not mix old and new APIs.
+- Check `response.ok` for `fetch`, and treat a client-side success message as a display, not as proof that the server accepted the change.
 - Avoid logging tokens, personal data, full request bodies, or server internals.
 - Act only on what the user asked. Before answering or changing anything, open the relevant files and check what is already done; report only what you checked, never guess, and do not redo finished work. Reason: guesses and repeated work waste the user's credit.
 
@@ -44,3 +46,4 @@ Use the `react-guardian-workflow` profile's route-and-implement mode for an inte
 
 - [react-interface-quality](../react-interface-quality/SKILL.md)
 - [react-testing](../react-testing/SKILL.md)
+- [react-web-security](../react-web-security/SKILL.md)

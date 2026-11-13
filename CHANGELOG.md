@@ -4,6 +4,12 @@ All notable changes to this plugin are listed here, newest first. To cut a relea
 
 ## [Unreleased]
 
+## [0.7.0] - 2026-11-13
+
+- Added three skills from the book gap analysis: react-state-and-effects (state placement, Effects, keys, Hooks, error boundaries), react-performance (measure first, then fix in order) and react-web-security (client guards are interface only, XSS and URLs, public env variables, token storage, server-confirmed payments).
+- Tightened react-migration (React 19 removal list), react-testing (roles, user-event, failure paths), react-interface-quality (focus traps, field errors) and react-api-integration (check response.ok, follow the installed data library version).
+- The router skill and always-on rules now route to the three new skills, and each has eval cases and trigger queries.
+
 ## [0.6.0] - 2026-11-05
 
 - Added a Works with other repos section to the router skill and README: it names the repos this one depends on or is relied on by, and when to hand off. Marketing comes first in the decision order (marketing, then look and feel, then the technical work). The map is in skills-repos-dependency-map.md beside the repos.

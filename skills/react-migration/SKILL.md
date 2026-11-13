@@ -17,6 +17,7 @@ Keep observable behaviour stable while changing runtime and APIs. The target ver
 - Keep `react` and `react-dom` versions compatible and preserve the package manager's lockfile discipline.
 - Do not remove `forwardRef`, class components, or `propTypes` indiscriminately. Confirm the exact API, component type, and target version first.
 - Treat Strict Mode development behaviour as a diagnostic signal. Do not hide warnings by disabling it without identifying the underlying issue.
+- Do not change the build tool or leave Create React App as part of a React upgrade unless asked. Create React App is deprecated, but moving off it is a separate migration with its own plan.
 - Do not promise a zero-warning upgrade when third-party libraries or unrelated warnings remain; identify ownership and evidence.
 - Act only on what the user asked. Before answering or changing anything, open the relevant files and check what is already done; report only what you checked, never guess, and do not redo finished work. Reason: guesses and repeated work waste the user's credit.
 
@@ -32,7 +33,7 @@ Keep observable behaviour stable while changing runtime and APIs. The target ver
 
 1. **Inventory** `react`, `react-dom`, type packages, framework, lockfile, render entry points, deprecated API usage, and test/build scripts.
 2. **Plan** compatible intermediate steps and risks. For React 19, consult the [official upgrade guide](https://react.dev/blog/2024/04/25/react-19-upgrade-guide) and follow its staged upgrade path rather than assuming a single jump between major versions.
-3. **Migrate** root rendering and deprecated APIs in small changes. Prefer official codemods only after reviewing their scope and the diff. Do not assume every library or app uses the same renderer.
+3. **Migrate** root rendering and deprecated APIs in small changes. Prefer official codemods only after reviewing their scope and the diff. Do not assume every library or app uses the same renderer. For React 19, check for `ReactDOM.render`, `hydrate` and `unmountComponentAtNode` (use `createRoot`, `hydrateRoot` and `root.unmount`), `propTypes` checks and `defaultProps` on function components (use default parameters or TypeScript), string refs, legacy context, `createFactory`, and `act` imported from `react-dom/test-utils` (import it from `react`). `react-test-renderer` is deprecated. Upgrading to React 18.3 first surfaces these as warnings.
 4. **Check behaviour** with existing tests, build, and targeted manual scenarios. Review warnings and fix only those caused by the migration.
 
 ## Agent dispatch

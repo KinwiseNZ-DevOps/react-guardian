@@ -44,7 +44,7 @@ Table of contents:
 
 [![Validate skills](https://github.com/KinwiseNZ-DevOps/react-guardian/actions/workflows/validate.yml/badge.svg)](https://github.com/KinwiseNZ-DevOps/react-guardian/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Agent skills](https://img.shields.io/badge/agent_skills-6-8A2BE2)](https://agentskills.io)
+[![Agent skills](https://img.shields.io/badge/agent_skills-9-8A2BE2)](https://agentskills.io)
 [![Format](https://img.shields.io/badge/format-SKILL.md-orange)](https://agentskills.io/specification)
 [![Tooling](https://img.shields.io/badge/tooling-stdlib_only-success)](scripts/skills_tool.py)
 
@@ -63,7 +63,10 @@ React Guardian routes React and React Native work into focused skills for migrat
 | [`react-interface-quality`](skills/react-interface-quality/SKILL.md) | Improves React DOM component structure, responsive behaviour, accessibility and design-system consistency. |
 | [`react-migration`](skills/react-migration/SKILL.md) | Plans and performs React for web version upgrades and legacy API migrations. |
 | [`react-native-development`](skills/react-native-development/SKILL.md) | Builds and reviews React Native applications using native components, platform-aware code and React Native tooling. |
+| [`react-performance`](skills/react-performance/SKILL.md) | Finds the real cause with measurements and applies the smallest fix. |
+| [`react-state-and-effects`](skills/react-state-and-effects/SKILL.md) | Governs state placement, Effects, keys and Hook structure. |
 | [`react-testing`](skills/react-testing/SKILL.md) | Writes or reviews tests for React components, hooks and user workflows. |
+| [`react-web-security`](skills/react-web-security/SKILL.md) | Do not use for HTTP client design (react-api-integration), server code, React Native secure storage or general accessibility. |
 <!-- catalogue:end -->
 
 ---

@@ -16,3 +16,12 @@
 {"skill": "react-testing", "type": "obvious", "query": "Write tests for this React hook and form component."}
 {"skill": "react-testing", "type": "paraphrase", "query": "Our UI tests are flaky. How should we decide what to test?"}
 {"skill": "react-testing", "type": "unrelated", "query": "Add a new feature to the checkout component."}
+{"skill": "react-state-and-effects", "type": "obvious", "query": "My useEffect runs twice and I think it is looping. How do I fix it?"}
+{"skill": "react-state-and-effects", "type": "paraphrase", "query": "Where should this piece of data live so two sibling components can both read it?"}
+{"skill": "react-state-and-effects", "type": "unrelated", "query": "Write the server endpoint for the orders list."}
+{"skill": "react-performance", "type": "obvious", "query": "Our React page is slow when I type in the search box. Speed it up."}
+{"skill": "react-performance", "type": "paraphrase", "query": "The initial bundle is huge and users on phones wait ages for the first screen."}
+{"skill": "react-performance", "type": "unrelated", "query": "Write the server endpoint for the orders list."}
+{"skill": "react-web-security", "type": "obvious", "query": "Review our React app for XSS and token storage problems."}
+{"skill": "react-web-security", "type": "paraphrase", "query": "Can someone with dev tools get into our admin screens or read our API keys from the front end?"}
+{"skill": "react-web-security", "type": "unrelated", "query": "Write the server endpoint for the orders list."}

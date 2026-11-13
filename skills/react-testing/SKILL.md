@@ -14,8 +14,11 @@ Test outcomes a user or caller can observe. Keep tests aligned with the reposito
 ## Hard rules
 
 - Do not assert private implementation details when rendered behaviour or public contracts can be tested.
-- Do not mock the unit under test or its local state transitions. Mock external boundaries only when the real boundary is not suitable for this test.
+- Do not mock the unit under test or its local state transitions. Mock external boundaries only when the real boundary is not suitable for this test, and mock at the network edge rather than inside the component.
 - Do not make time-sensitive or network-dependent tests flaky. Control the clock or isolate external services using project conventions.
+- Query by role, label or accessible name before text or test ids, drive interactions with `@testing-library/user-event` where the project has it, and wait for async UI with `findBy` queries or `waitFor`.
+- Test the failure path of anything that can fail, such as a rejected request or a validation error, not only the success path.
+- Avoid snapshots of whole component trees; use them only for small, stable output. `react-test-renderer` is deprecated.
 - Do not suppress React warnings broadly; identify and fix the source or explain why an isolated warning is expected.
 - For React Native tests, follow the installed project's setup. JavaScript component tests do not validate the underlying platform code, so verify platform-dependent behaviour on a device or simulator.
 - Act only on what the user asked. Before answering or changing anything, open the relevant files and check what is already done; report only what you checked, never guess, and do not redo finished work. Reason: guesses and repeated work waste the user's credit.

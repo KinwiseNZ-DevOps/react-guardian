@@ -19,6 +19,7 @@ Retain the product's visual identity and user flows. Prefer composable component
 - Use native semantic elements and labels first. Add ARIA only when native semantics do not express the interaction.
 - Keep components and Hooks pure during render. Do not mutate props, state, or other non-local values; run side effects in event handlers or Effects.
 - Keep controls keyboard-operable, with visible focus and understandable names. Ensure async feedback and validation errors are perceivable.
+- Trap keyboard focus only inside modal content, never in an ordinary form or page. Link each error message to its field (`aria-invalid` and `aria-describedby`) and announce it with one live-region mechanism, not several.
 - Avoid rendering the same information in different structures solely by device size when responsive CSS can preserve semantics.
 - Do not add loading, error, or empty states mechanically when the component has no asynchronous or variable data.
 - Act only on what the user asked. Before answering or changing anything, open the relevant files and check what is already done; report only what you checked, never guess, and do not redo finished work. Reason: guesses and repeated work waste the user's credit.

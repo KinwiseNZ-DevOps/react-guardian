@@ -32,7 +32,7 @@ Preserve the application's behaviour, accessibility, and established design whil
 ## Steps
 
 1. **Inspect** package manifests, source layout, scripts, tests, and the exact requested behaviour.
-2. **Route** React DOM runtime or legacy API migrations to [react-migration](../react-migration/SKILL.md), browser UI changes to [react-interface-quality](../react-interface-quality/SKILL.md), native app changes and React Native upgrades to [react-native-development](../react-native-development/SKILL.md), HTTP communication to [react-api-integration](../react-api-integration/SKILL.md), and test work to [react-testing](../react-testing/SKILL.md).
+2. **Route** React DOM runtime or legacy API migrations to [react-migration](../react-migration/SKILL.md), browser UI changes to [react-interface-quality](../react-interface-quality/SKILL.md), native app changes and React Native upgrades to [react-native-development](../react-native-development/SKILL.md), HTTP communication to [react-api-integration](../react-api-integration/SKILL.md), test work to [react-testing](../react-testing/SKILL.md), state, Effect and Hook problems to [react-state-and-effects](../react-state-and-effects/SKILL.md), measured slowness to [react-performance](../react-performance/SKILL.md), and browser security review to [react-web-security](../react-web-security/SKILL.md).
 3. **Coordinate** overlapping work by keeping each change within its owner's scope and sharing assumptions.
 4. **Verify** using the repository's scripts and tests relevant to the changed behaviour. Report checks not run.
 
@@ -52,6 +52,9 @@ Use the `react-guardian-workflow` profile when available. It handles route-and-i
 - [react-api-integration](../react-api-integration/SKILL.md)
 - [react-testing](../react-testing/SKILL.md)
 - [react-native-development](../react-native-development/SKILL.md)
+- [react-state-and-effects](../react-state-and-effects/SKILL.md)
+- [react-performance](../react-performance/SKILL.md)
+- [react-web-security](../react-web-security/SKILL.md)
 
 ## Works with other repos
 
